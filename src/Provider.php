@@ -17,7 +17,7 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase(env('SHAREPOINT_SITEURL','https://lshtm.sharepoint.com/_layouts/15/OAuthAuthorize.aspx'), $state);
+        return $this->buildAuthUrlFromBase(env('SHAREPOINT_SITE_URL') . '/_layouts/15/OAuthAuthorize.aspx', $state);
     }
 
     /**
